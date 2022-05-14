@@ -1,0 +1,9 @@
+1. Произведена ручная минификация кода.
+2. Скрипт "stats.js" перенесён в конец "index.html" c атрибутом "async",
+   чтобы срипт не блокировал загрузку страницы.
+3. Обход элементов во время скролла для нахождения "stickyHeader.textContent"
+   в "contacts.js" заменен на: Math.floor(contacts.scrollTop/18), где
+   "contacts.scrollTop" - кол-во пикселей от верха, "18" - отступ от родителя.
+4. В стиль класса "contacts" добавлен "will-change: scroll-position",
+   класса "stickyHeader" - "will-change: contents" - уведомление браузера
+   об ожидании изменения элемента.
